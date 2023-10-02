@@ -8,10 +8,17 @@
   <title>Informáticos da fofoca</title>
   <link rel="stylesheet" href="style/bootstrap.min.css">
   <link rel="icon" href="images/if logo.png">
-  <script src="script/bootstrap.min.js" defer></script>
+  <!-- <script src="script/modoEscuro.js" defer></script> -->
 </head>
 
 <body>
+  <script type="module">
+    import { Toast } from 'bootstrap.esm.min.js'
+  
+    Array.from(document.querySelectorAll('.toast'))
+      .forEach(toastNode => new Toast(toastNode))
+  </script>
+
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img src="images/ifpr logo.png" alt="" height="80px" style="margin: 10px;"></a>
@@ -30,10 +37,12 @@
         <li class="nav-item">
           <a class="nav-link" href="https://www.instagram.com/sonif_cwb/">Sonif</a>
         </li>
+        <!-- <li class="nav-item">
+          <button type="button" class="btn btn-dark" onclick="modoEscuro()">Dark Mode</button>
+        </li> -->
       </ul>
     </div>
   </nav>
-
 
   <div class="container">
     <br>
@@ -44,31 +53,39 @@
     </nav>
 
     <div class="row">
-      <div class="card" style="width: 18rem; margin: 10px;">
-        <img class="card-img-top" src="images/malu.PNG" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"><b>Malu de PG1</b> é flagrada tirando um ronco durante a aula</p>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/malu.PNG" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"><b>Malu de PG1</b> é flagrada tirando um ronco durante a aula</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 10px;">
-        <img class="card-img-top" src="images/tio luiz.PNG" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Tio Luiz é flagrado procurando alunos gazeando em salas de aula</p>
-          <p class="card-text"><b>"Tá em aula filhão?"</b> - disse ele</p>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/tio luiz.PNG" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Tio Luiz é flagrado procurando alunos gazeando em salas de aula</p>
+            <p class="card-text"><b>"Tá em aula filhão?"</b> - disse ele</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 10px;">
-        <img class="card-img-top" src="images/isis.PNG" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Cabelo verde vira tendência entre os professores do ifpr - disse professora Isis</p>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/isis.PNG" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Cabelo verde vira tendência entre os professores do ifpr - disse professora Isis</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem; margin: 10px;">
-        <img class="card-img-top" src="images/pedro.PNG" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">Pedro de info 2 é flagrado dormindo no ônibus durante o passeio do professor Leandro</p>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/pedro.PNG" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Pedro de info 2 é flagrado dormindo no ônibus durante o passeio do professor Leandro
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
 
@@ -84,7 +101,7 @@
 
       <div class="col">
         <a href="https://www.instagram.com/p/Cs3pKxeMBWm/?img_index=1" style="text-decoration: none;">
-          <div class="card" style="width: 18rem; margin: 10px;">
+          <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="images/vole.PNG" alt="Card image cap">
             <div class="card-body">
               <p class="card-text">Equipe masculina conquistou o segundo lugar nos Jogos Escolares.</p>
@@ -92,7 +109,30 @@
           </div>
         </a>
       </div>
-
+      <div class="col">
+        <a href="https://www.instagram.com/p/CxqeiSERZkh/?igshid=MWZjMTM2ODFkZg%3D%3D&img_index=1"
+          style="text-decoration: none;">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/escalada.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">O IFPR Campus Curitiba sediou, entre os dias 21 e 26 de agosto, um evento de escalada
+                na sala do projeto “Climbif”.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://www.instagram.com/p/CxYYUG5NGJc/?igshid=MWZjMTM2ODFkZg%3D%3D" style="text-decoration: none;">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/imigrantes.png" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Entre os dias 14 e 16 de setembro, os servidores Priscila da Silva Duarte, Regina
+                Célia de Castro Gomes e Edilson Pereira Brito, do Instituto Federal do Paraná – Campus Curitiba,
+                marcaram presença no VII ENNEAB e no VII ERAS. </p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
 </body>
